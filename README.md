@@ -77,11 +77,11 @@ sh scripts/run_mask3d_eval.sh
 
 ## Models
 
-|  | ScanRefer |  | Multi3DRefer |  | SQA3D |
-| :-----------------------: | :--------: | :--------: | :--------: | :--------: | :--------: |
-| Model                     | Acc.@0.25 | Acc.@0.5 | F1@0.25 | F1@0.5 | EM@1 |
-| [Chat-Scene + QuatRoPE](https://huggingface.co/fzzsl/QuatRoPE/blob/main/quatrope-igre-m3d-finetune-7b-knn-0.pth) | 57.8 | 52.2 | 59.5 | 54.8 | 54.7 |
-| [3DGraphLLM + QuatRoPE](https://huggingface.co/fzzsl/QuatRoPE/blob/main/quatrope-igre-m3d-finetune-7b-knn-2.pth) | 58.2 | 52.5 | 60.6 | 56.0 | 55.2 |
+|  |  | ScanRefer |  | Multi3DRefer |  | SQA3D |
+| :-----------------------: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: |
+| Model                     | Weights      | Acc.@0.25 | Acc.@0.5 | F1@0.25 | F1@0.5 | EM@1 |
+| Chat-Scene + QuatRoPE | [Hugging Face](https://huggingface.co/fzzsl/QuatRoPE/blob/main/quatrope-igre-m3d-finetune-7b-knn-0.pth) / [Model Scope](https://www.modelscope.cn/models/Chestnut622/QuatRoPE/file/view/master/quatrope-igre-m3d-finetune-7b-knn-0.pth) | 57.8 | 52.2 | 59.5 | 54.8 | 54.7 |
+| 3DGraphLLM + QuatRoPE | [Hugging Face](https://huggingface.co/fzzsl/QuatRoPE/blob/main/quatrope-igre-m3d-finetune-7b-knn-2.pth) / [Model Scope](https://www.modelscope.cn/models/Chestnut622/QuatRoPE/file/view/master/quatrope-igre-m3d-finetune-7b-knn-2.pth) | 58.2 | 52.5 | 60.6 | 56.0 | 55.2 |
 
 Note: The checkpoints are based on Vicuna-7B-v1.5, trained by GT segmentation, and fine-tuned using the Mask3D segmentation.
 
