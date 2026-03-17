@@ -1,4 +1,4 @@
-# QuatRoPE
+<h1 align="center">QuatRoPE</h1>
 
 <p align="center">
     <a href='https://arxiv.org/abs/'>
@@ -36,15 +36,15 @@ conda install -c conda-forge openjdk
 ```
 
 2. Download and install [flash attention](https://github.com/Dao-AILab/flash-attention/releases), we use v2.8.3 in our environment.
-3. Download LLM backbone from [Hugging Face](https://huggingface.co/lmsys/vicuna-7b-v1.5), and modify `llama_model_path` in the bash scripts in `scripts/`.
-4. Follow the [instructions](preprocess/) to prepare annotations and extracted features.
+3. Download LLM backbone from [Hugging Face](https://huggingface.co/lmsys/vicuna-7b-v1.5), and modify `llama_model_path` in the bash scripts in the `scripts/` directory.
+4. Download annotations from [Hugging Face](https://huggingface.co/datasets/ZzZZCHS/Chat-Scene/tree/main/annotations) AND [Yandex Disk](https://disk.yandex.ru/d/LpPJgHg8Qg6BpA) and place them in the `annotations/` directory, more details for data preparation can be found [here](https://github.com/CognitiveAISystems/3DGraphLLM/tree/main/preprocess).
 5. Replace `(env_base_path)/lib/python3.9/site-packages/transformers/generation/utils.py` with `generation/utils.py`. `(env_base_path)` can be found by running `conda env list` in the terminal (use the path corresponding to the `quatrope` environment).
 
 ### ASR Benchmark
 
 #### Dataset Preparation
 
-The data for the ASR benchmark are in `ASR/scanqa_scanrefer_gt_val.json`, move it under `annotations/` (generated in Step 4 of installation).
+The data for the ASR benchmark are in `ASR/scanqa_scanrefer_gt_val.json`, move it under the `annotations/` directory.
 
 #### Zero-Shot Evaluation
 
@@ -57,7 +57,7 @@ sh scripts/run_gt_eval_asr.sh
 
 ## Training & Inference
 
-1. Pretrain on GT segmentation:
+1. Pretrain on ground-truth (GT) segmentation:
 
 ```sh
 sh scripts/run_gt_pretrain.sh
