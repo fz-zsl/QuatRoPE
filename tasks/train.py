@@ -301,9 +301,9 @@ def evaluate(
             val_scores = calc_scanrefer_location_score(save_preds, config)
         elif eval_name == "multi3dref_location":
             val_scores = calc_multi3dref_location_score(save_preds, config)
-        print(json.dumps(val_scores, indent=4))
         for k in val_scores.keys():
             val_scores[k] *= 100  # show percentage
+        print(json.dumps(val_scores, indent=4))
         with open(os.path.join(config.output_dir, f"scores_{eval_name}.json"), "w") as f:
             json.dump(val_scores, f, indent=4)
     return val_scores
